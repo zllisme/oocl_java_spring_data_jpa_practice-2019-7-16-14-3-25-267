@@ -38,6 +38,12 @@ public class CompanyController {
         companyRepository.deleteById(id);
     }
 
+    @GetMapping(params = {"name"})
+    public Company getCompanyByName(@RequestParam String name) {
+        return companyRepository.findByName(name);
+
+    }
+
 
 
 
