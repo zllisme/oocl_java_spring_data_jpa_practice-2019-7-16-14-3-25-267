@@ -33,5 +33,12 @@ public class CompanyController {
         return companyRepository.save(company);
     }
 
+    @DeleteMapping("/{id}")
+    public void deleteCompany(@PathVariable Long id) {
+        companyRepository.deleteById(id);
+    }
+
+
+
 
 }
